@@ -23,7 +23,7 @@ def calculator():
 
     print(logo)
     
-    num1 = int(input("What is the first number? "))
+    num1 = float(input("What is the first number? "))
     for key in operators:
         print(key)
 
@@ -31,7 +31,7 @@ def calculator():
 
     while should_continue:
         operation = input("Pick an operation: ")
-        num2 = int(input("What is the next number? "))
+        num2 = float(input("What is the next number? "))
 
         calculation_function = operators[operation]
         result = calculation_function(num1, num2)
