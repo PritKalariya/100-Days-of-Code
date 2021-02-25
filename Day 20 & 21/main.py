@@ -13,6 +13,14 @@ screen.tracer(0)
 snake = Snake()
 
 
+#TODO3: Control the snake
+screen.listen()
+screen.onkey(snake.up , "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
+
+
 #TODO2: Move the snake
 game_is_on = True
 while game_is_on:
@@ -21,8 +29,6 @@ while game_is_on:
 
     snake.move()
 
-
-#TODO3: Control the snake
 
 #TODO4: Detect collision with food
 
