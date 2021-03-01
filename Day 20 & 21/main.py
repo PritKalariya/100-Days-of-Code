@@ -51,7 +51,7 @@ while game_is_on:
 
 
     #TODO6: End game (Collision with wall)
-    if snake.head.xcor() > 280 or snake.head.xcor() < -300 or snake.head.ycor() > 260 or snake.head.ycor() < -280:
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
         game_is_on = False
         scoreboard.game_over()
 
