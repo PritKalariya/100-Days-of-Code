@@ -1,6 +1,7 @@
 from turtle import Screen
 from snake import Snake
 from food import Food
+from scoreboard import Scoreboard
 import time
 
 screen = Screen()
@@ -8,6 +9,10 @@ screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Python Snake Game")
 screen.tracer(0)
+
+
+#TODO5: Create scoreboard
+scoreboard = Scoreboard()
 
 
 #TODO1: Create the snake body
@@ -38,8 +43,9 @@ while game_is_on:
     if snake.head.distance(food) < 15:
         food.refresh()
 
+        #Increase score when the snake hits the food
+        scoreboard.increase_score()
 
-#TODO5: Create scoreboard
 
 #TODO6: End game (Collision with wall)
 
