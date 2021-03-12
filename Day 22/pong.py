@@ -45,7 +45,15 @@ while game_is_on:
         ball.bounce_x()
 
 
-#TODO7: Detect when paddle misses the ball
+    #TODO7: Detect when paddle misses the ball
+    # Detect R paddle miss
+    if ball.xcor() > 380:
+        ball.reset_position()
+
+    # Detect L paddle miss
+    if ball.xcor() < -380:
+        ball.reset_position()
+
 
 #TODO8: Keep scores
 
