@@ -1,5 +1,7 @@
 from turtle import Screen, Turtle
 from paddle import Paddle
+from ball import Ball
+import time
 
 
 #TODO1: Create the screen
@@ -23,12 +25,21 @@ screen.onkey(l_paddle.go_up, "w")
 screen.onkey(l_paddle.go_down, "s")
 
 
+#TODO4: Create the ball and make it move
+ball = Ball()
+
+
 game_is_on = True
 while game_is_on:
+    time.sleep(0.1)
     screen.update()
+    ball.move()
 
+    # Detect collision with the wall
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        # Bounce the ball
+        ball.bounce()
 
-#TODO4: Create the ball and make it move
 
 #TODO5: Detect collision with wall and bounce back
 
