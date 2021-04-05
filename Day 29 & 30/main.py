@@ -6,7 +6,7 @@ import json
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
-def generatee_password():
+def generate_password():
     password_entry.delete(0, END)
 
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -69,6 +69,18 @@ def save():
 
                 website_entry.focus()
 
+# ---------------------------- Search Password -------------------------- #
+def search_password():
+    website = website_entry.get()
+
+    with open("data.json", mode="r") as data_file:
+        data = json.load(data_file)
+
+        if website in data:
+            email = data[website]["email"]
+            password = data[website]["password"]
+            messagebox.showinfo(title=website, message=f"Email: {email}\nPassword: {password}")
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -94,8 +106,8 @@ password_label.grid(row=3, column=0)
 
 
 # Entries
-website_entry = Entry(width=35)
-website_entry.grid(row=1, column=1, columnspan=2, sticky="EW")
+website_entry = Entry(width=30)
+website_entry.grid(row=1, column=1, sticky="W")
 website_entry.focus()
 
 email_entry = Entry(width=35)
@@ -107,11 +119,14 @@ password_entry.grid(row=3, column=1, sticky="W")
 
 
 # Buttons
-generate_pass_btn = Button(text="Generate Password", command=generatee_password)
+generate_pass_btn = Button(text="Generate Password", command=generate_password)
 generate_pass_btn.grid(row=3, column=2, sticky="EW")
 
 add_btn = Button(text="Add", width=36, command=save)
 add_btn.grid(row=4, column=1, columnspan=2, sticky="EW")
+
+search_btn = Button(text="Search", command=search_password)
+search_btn.grid(row=1, column=2, sticky="EW")
 
 
 window.mainloop()
