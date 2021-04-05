@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 from random import choice, randint, shuffle
 import pyperclip
+import json
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
@@ -28,31 +29,41 @@ def generatee_password():
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
-    with open("data.txt", mode="a") as file:
-        website = website_entry.get()
-        email = email_entry.get()
-        password = password_entry.get()
+    website = website_entry.get()
+    email = email_entry.get()
+    password = password_entry.get()
+    new_data = {
+        website: {
+            "email": email,
+            "password": password,
+        }
+    }
 
 
-        if len(website) == 0 or len(password) == 0:
-            messagebox.showinfo(title="Oops", message="Make sure you haven't left any fields empty.")
-        else:
-            yes = messagebox.askyesno(title=website, message=f"These are the entered details: \n\nEmail: {email} \nPassword: {password} \n\nAre you sure you want to save this?")
+    if len(website) == 0 or len(password) == 0:
+        messagebox.showinfo(title="Oops", message="Make sure you haven't left any fields empty.")
+    else:
+        # yes = messagebox.askyesno(title=website, message=f"These are the entered details: \n\nEmail: {email} \nPassword: {password} \n\nAre you sure you want to save this?")
 
-            if yes:
-                file.write("/")
-                file.write("-"*30)
-                file.write("/")
-                file.write(f"\nWebsite: {website}\nEmail: {email}\npassword: {password}\n")
-                file.write("/")
-                file.write("-"*30)
-                file.write("/")
-                file.write("\n\n")
 
-                website_entry.delete(0, END)
-                password_entry.delete(0, END)
+        with open("data.json", mode="r") as data_file:
+            # Read old data
+            data = json.load(data_file)
 
-                website_entry.focus()
+            # Update old data
+            data.update(new_data)
+
+
+        with open("data.json", mode="w") as data_file:
+            # Saving the updated data
+            json.dump(data, data_file, indent=4)
+
+
+        if TRUE:
+            website_entry.delete(0, END)
+            password_entry.delete(0, END)
+
+            website_entry.focus()
 
 
 # ---------------------------- UI SETUP ------------------------------- #
