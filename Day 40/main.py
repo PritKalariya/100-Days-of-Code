@@ -38,13 +38,13 @@ for destination in sheet_data:
         to_time=six_month_from_today
     )
 
-    # Send sms
-    try:
-        price = flight.price
-    except AttributeError:
+
+    if flight is None:
         print(f"No flights found for {destination['iataCode']}")
-    else:
-        if flight.price < destination["lowestPrice"]:
-            notification_manager.send_sms(
-                message=f"Low price alert! Only £{flight.price} to fly from {flight.origin_city}-{flight.origin_airport} to {flight.destination_city}-{flight.destination_airport}, from {flight.out_date} to {flight.return_date}."
-            )
+        continue
+
+    # Send sms
+    if flight.price < destination["lowestPrice"]:
+        notification_manager.send_sms(
+            message=f"Low price alert! Only £{flight.price} to fly from {flight.origin_city}-{flight.origin_airport} to {flight.destination_city}-{flight.destination_airport}, from {flight.out_date} to {flight.return_date}."
+        )
