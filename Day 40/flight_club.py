@@ -38,7 +38,9 @@ response = requests.post(
     url=os.getenv('SHEETY_USERS_ENDPOINT'),
     json=new_member
 )
-print(response.text)
 
 
-print("\nCongrats! You'r in the club.\n")
+if response.status_code == 200:
+    print("\nCongrats! You'r in the club.\n")
+else:
+    print(response.text)
