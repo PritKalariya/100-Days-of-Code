@@ -21,6 +21,7 @@ Here is the list of all the projects 👇
 13. Debugging practice
 14. Higher Lower Game
 
+
 ## Intermediate Level Projects
 15. Coffee Machine Program
 16. Coffee Machine Program using OOP
@@ -40,6 +41,7 @@ Here is the list of all the projects 👇
 30. Password Manager (part 2)
 31. Flash Card Program
 
+
 ## Intermediate+ Level Projects
 32. i) Automated monday motivation mails & ii) Autommated Birthday Wisher
 33. i) Kanye Quotes App & ii) ISS Overhead Notifier
@@ -50,3 +52,12 @@ Here is the list of all the projects 👇
 38. Workout Tracker using Google Sheets
 39. Flight Deal Finder (part 1)
 40. Flight Club (part 2)
+
+
+## Web Foundations
+41. Introdunction to HTML
+42. Intermediate HTML
+43. Introduction to CSS
+44. Intermediate CSS
+
+Project: Built a personal webiste.
