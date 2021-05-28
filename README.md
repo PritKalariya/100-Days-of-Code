@@ -61,3 +61,11 @@ Here is the list of all the projects 👇
 44. Intermediate CSS
 
 Project: Built a personal webiste.
+
+## Intermediate+ Level Projects
+45. 100 Movies You Should Watch (Web Scraping)
+46. Scraping BillBoard Top 100
+47. Automated Amazon Price Tracker
+48. Automated Game Playing Bot (Cookie Clicker)
+49. Automated Job Applying and Saving on LinkedIn
+50. Auto Tinder Swiping Bot
