@@ -69,3 +69,5 @@ Project: Built a personal webiste.
 48. Automated Game Playing Bot (Cookie Clicker)
 49. Automated Job Applying and Saving on LinkedIn
 50. Auto Tinder Swiping Bot
+51. Internet Speed Twitter Complaint Bot
+52. Instagram Followers Bot
