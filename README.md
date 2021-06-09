@@ -73,3 +73,5 @@ Project: Built a personal webiste.
 52. Instagram Followers Bot
 53. Data Entry Job Automation
 54. Creating first web server with flask
+55. Higher Lower Game using flask
+56. Rendering HTML/static files using flask.
