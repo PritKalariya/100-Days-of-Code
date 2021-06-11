@@ -75,3 +75,4 @@ Project: Built a personal webiste.
 54. Creating first web server with flask
 55. Higher Lower Game using flask
 56. Rendering HTML/static files using flask.
+57. Blog templating with jinja in flask application.
