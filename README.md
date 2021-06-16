@@ -76,3 +76,5 @@ Project: Built a personal webiste.
 55. Higher Lower Game using flask
 56. Rendering HTML/static files using flask.
 57. Blog templating with jinja in flask application.
+58. Web Foundation Bootstrap.
+59. Bootstrap Clean Blog Website.
