@@ -77,4 +77,6 @@ Project: Built a personal webiste.
 56. Rendering HTML/static files using flask.
 57. Blog templating with jinja in flask application.
 58. Web Foundation Bootstrap.
+
+## Advance Level Projects
 59. Bootstrap Clean Blog Website.
