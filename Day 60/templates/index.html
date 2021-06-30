@@ -7,7 +7,7 @@
   <body>
     <section>
       <div class="container">
-        <form action="/login" method="post" id="my-form">
+        <form action="{{ url_for('receive_data') }}" method="post" id="my-form">
 
           <div class="form-group">
             <label for="firstName">First Name</label>
