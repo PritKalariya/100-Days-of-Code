@@ -80,3 +80,5 @@ Project: Built a personal webiste.
 
 ## Advance Level Projects
 59. Bootstrap Clean Blog Website.
+60. Contact Form
+61. Advance Form with Flask-WTForms.
