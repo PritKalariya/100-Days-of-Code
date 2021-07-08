@@ -14,5 +14,10 @@
             <input type="text" name="rating">
             <button type="submit">Add Book</button>
         </form>
+
+        {% if exists: %}
+        <h3 style="color: red;">This book is already in your library.</h3>
+        {% endif %}
+
     </body>
 </html>
