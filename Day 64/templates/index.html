@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 {% endblock %}
 
-{% block title %}My Top 10 Movies{% endblock %}
+{% block title %}My Top Movies{% endblock %}
 
 {% block content %}
 <div class="container">
-  <h1 class="heading">My Top 10 Movies</h1>
+  <h1 class="heading">My Top Movies</h1>
   <p class="description">These are my all time favourite movies.</p>
 
   {% for movie in movies %}
@@ -39,7 +39,7 @@
 
 </div>
 <div class="container text-center add">
-  <a href="#" class="button">Add Movie</a>
+  <a href="{{ url_for('add_movie') }}" class="button">Add Movie</a>
 </div>
 
 {% endblock %}
