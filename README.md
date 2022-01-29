@@ -43,7 +43,7 @@ Here is the list of all the projects 👇
 
 
 ## Intermediate+ Level Projects
-32. i) Automated monday motivation mails & ii) Autommated Birthday Wisher
+32. i) Automated monday motivation mails & ii) Automated Birthday Wisher
 33. i) Kanye Quotes App & ii) ISS Overhead Notifier
 34. Quizzler App
 35. Rain Alert Application
@@ -55,12 +55,12 @@ Here is the list of all the projects 👇
 
 
 ## Web Foundations
-41. Introdunction to HTML
+41. Introduction to HTML
 42. Intermediate HTML
 43. Introduction to CSS
 44. Intermediate CSS
 
-Project: Built a personal webiste.
+Project: Build a personal website.
 
 ## Intermediate+ Level Projects
 45. 100 Movies You Should Watch (Web Scraping)
